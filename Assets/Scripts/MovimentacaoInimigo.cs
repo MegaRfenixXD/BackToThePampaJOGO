@@ -33,7 +33,7 @@ public class MovimentacaoInimigo : MonoBehaviour
     void Start()
     {
         fisica = GetComponent<Rigidbody2D>();
-        destroiinimigo = GameObject.Find("hero").GetComponent<Movimentacao>();
+        destroiinimigo = GameObject.Find("Gauchito").GetComponent<Movimentacao>();
         Time.timeScale = 1;
     }
 
@@ -41,7 +41,7 @@ public class MovimentacaoInimigo : MonoBehaviour
     void FixedUpdate()
     {
         Andar();
-        animator.SetBool("explosion", destroiinimigo.explosion);
+       // animator.SetBool("explosion", destroiinimigo.explosion);
     }
     void Andar()
     {
