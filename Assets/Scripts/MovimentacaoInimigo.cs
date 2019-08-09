@@ -14,7 +14,7 @@ public class MovimentacaoInimigo : MonoBehaviour
     [SerializeField]
     private float velocidade;
 
-    private Rigidbody2D fisica;
+    public Rigidbody2D fisica;
 
     public bool girarinimigo;
 
