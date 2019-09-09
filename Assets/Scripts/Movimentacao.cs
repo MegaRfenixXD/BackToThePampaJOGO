@@ -146,12 +146,32 @@ public class Movimentacao : MonoBehaviour
         hit = Physics2D.Linecast(LinhaInicio.position, LinhaFim.position);
         if (hit.collider != null)
         {
-            if (hit.collider.gameObject.tag == "Inimigo")
+            if (hit.collider.gameObject.tag == "Cruzeira1")
             {
 
 
                 velocidade.velocity = new Vector2(velocidade.velocity.x, intensidadePulo);
-                Destroy(GameObject.FindGameObjectWithTag("Inimigo"));
+                Destroy(GameObject.FindGameObjectWithTag("Cruzeira1"));
+                Explosao = true;
+
+            }
+
+            if (hit.collider.gameObject.tag == "Tatuzito1")
+            {
+
+
+                velocidade.velocity = new Vector2(velocidade.velocity.x, intensidadePulo);
+                Destroy(GameObject.FindGameObjectWithTag("Tatuzito1"));
+                Explosao = true;
+
+            }
+
+            if (hit.collider.gameObject.tag == "Tatuzito2")
+            {
+
+
+                velocidade.velocity = new Vector2(velocidade.velocity.x, intensidadePulo);
+                Destroy(GameObject.FindGameObjectWithTag("Tatuzito2"));
                 Explosao = true;
 
             }

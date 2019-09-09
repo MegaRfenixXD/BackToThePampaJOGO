@@ -24,6 +24,9 @@ TagManager:
   - LimiteCima
   - LimiteBaixo
   - Morte
+  - Cruzeira1
+  - Tatuzito1
+  - Tatuzito2
   layers:
   - Default
   - TransparentFX
