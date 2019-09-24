@@ -1619,6 +1619,7 @@ MonoBehaviour:
   limiteFim: {fileID: 161346184}
   velocidadebase: 3
   velocidade: 3
+  fisica: {fileID: 0}
   girarinimigo: 0
   destroiinimigo: {fileID: 146350500}
   VidaJogador: 3
@@ -2491,7 +2492,7 @@ Transform:
 --- !u!199 &502881489
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -8289,7 +8290,7 @@ PrefabInstance:
     - target: {fileID: 2360214402025340032, guid: 4b7d8ac13d3af37438205707c9f62669,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4399083258330483447, guid: 4b7d8ac13d3af37438205707c9f62669,
         type: 3}
@@ -8710,7 +8711,7 @@ MonoBehaviour:
 --- !u!199 &1378186624
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
