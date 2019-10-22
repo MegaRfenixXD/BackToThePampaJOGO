@@ -55,7 +55,7 @@ public class MovimentacaoInimigo : MonoBehaviour
             Debug.Log("Vidas:" + VidaJogador);
             TomouDano = true;
             SoundManager.Playsound("Dano");
-            destroiinimigo.Pulinho();
+            
             VidaJogador--;
 
 

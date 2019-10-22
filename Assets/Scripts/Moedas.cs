@@ -10,7 +10,7 @@ public class Moedas : MonoBehaviour
 
     private string Nome;
 
-    public Text moedinhas;
+    public Text moedinhas,desempenho;
 
     public Sprite moedas0, moedas1, moedas2, moedas3, Gravar,Cena;
 
@@ -19,6 +19,8 @@ public class Moedas : MonoBehaviour
 
     public int vari;
 
+    
+
 
 
 
@@ -26,6 +28,7 @@ public class Moedas : MonoBehaviour
 
     void Start()
     {
+
         Nome = SceneManager.GetActiveScene().name;
 
         moedinhas = GameObject.Find("MoedinhasText").GetComponent<Text>();
@@ -34,6 +37,8 @@ public class Moedas : MonoBehaviour
         Cena = GameObject.Find("Moedas").GetComponent<SpriteRenderer>().sprite = moedas0;
 
         Gravar = GameObject.Find("Teste").GetComponent<SpriteRenderer>().sprite = moedas0;
+
+        desempenho = GameObject.Find("DesempenhoText").GetComponent<Text>();
 
 
 
@@ -47,6 +52,7 @@ public class Moedas : MonoBehaviour
         {
 
             Gravar = GameObject.Find("Teste").GetComponent<SpriteRenderer>().sprite = moedas0;
+            
 
 
         }
@@ -88,9 +94,12 @@ public class Moedas : MonoBehaviour
 
             if (moedas.contagem == 0)
             {
+                
                 Cena = GameObject.Find("Moedas").GetComponent<SpriteRenderer>().sprite = moedas0;
                 PlayerPrefs.SetInt("level1", moedas.contagem);
+                desempenho.text = "Ruim";
 
+                
             }
                 
                
@@ -102,7 +111,9 @@ public class Moedas : MonoBehaviour
                 Cena = GameObject.Find("Moedas").GetComponent<SpriteRenderer>().sprite = moedas1;
                 
                PlayerPrefs.SetInt("level1", moedas.contagem);
-                }
+            desempenho.text = "Bom";
+
+        }
 
             
 
@@ -110,17 +121,21 @@ public class Moedas : MonoBehaviour
             {
                 Cena = GameObject.Find("Moedas").GetComponent<SpriteRenderer>().sprite = moedas2;
                 PlayerPrefs.SetInt("level1", moedas.contagem);
-                
+            desempenho.text = "Otimo";
 
-            }
+
+
+        }
 
             if (moedas.contagem == 3)
             {
                 Cena = GameObject.Find("Moedas").GetComponent<SpriteRenderer>().sprite = moedas3;
                
                 PlayerPrefs.SetInt("level1", moedas.contagem);
+            desempenho.text = "Execelente";
 
-            }
+
+        }
           
 
 

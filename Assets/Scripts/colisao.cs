@@ -10,14 +10,14 @@ public class colisao : MonoBehaviour
     public LevelComplete lvlcompleto;
     private GameObject pacote;
 
-    public bool lvlpronto=false;
+    public bool lvlpronto = false;
 
     private void Start()
     {
         Sprite = GetComponent<SpriteRenderer>();
         colisaao = GetComponent<BoxCollider2D>();
         movimentacao = GameObject.Find("Gauchito").GetComponent<Movimentacao>();
-        
+
     }
 
 
@@ -25,26 +25,29 @@ public class colisao : MonoBehaviour
     {
         if (movimentacao.ativa)
         {
-            if (Input.GetKey(KeyCode.D))
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {
-                Debug.Log("oi");
-                Sprite.enabled = true;
-                colisaao.enabled = true;
-                lvlpronto = true;
-
-                
-            }
-            if (Input.GetKey(KeyCode.A)){
                 Debug.Log("oi");
                 Sprite.enabled = false;
                 colisaao.enabled = false;
-                lvlpronto = true;
-
-               
+                lvlpronto = false;
             }
+
+            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+            {
+                {
+                    Debug.Log("oi");
+                    Sprite.enabled = true;
+                    colisaao.enabled = true;
+                    lvlpronto = true;
+
+
+                }
+                
+            }
+
         }
     }
-
 }
 
     

@@ -152,7 +152,7 @@ public class Movimentacao : MonoBehaviour
 
                 velocidade.velocity = new Vector2(velocidade.velocity.x, intensidadePulo);
                 Destroy(GameObject.FindGameObjectWithTag("Cruzeira1"));
-                Explosao = true;
+               // Explosao = true;
 
             }
 
@@ -162,7 +162,7 @@ public class Movimentacao : MonoBehaviour
 
                 velocidade.velocity = new Vector2(velocidade.velocity.x, intensidadePulo);
                 Destroy(GameObject.FindGameObjectWithTag("Tatuzito1"));
-                Explosao = true;
+                //Explosao = true;
 
             }
 
@@ -172,7 +172,7 @@ public class Movimentacao : MonoBehaviour
 
                 velocidade.velocity = new Vector2(velocidade.velocity.x, intensidadePulo);
                 Destroy(GameObject.FindGameObjectWithTag("Tatuzito2"));
-                Explosao = true;
+                //Explosao = true;
 
             }
         }

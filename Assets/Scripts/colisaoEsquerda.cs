@@ -25,7 +25,7 @@ public class colisaoEsquerda : MonoBehaviour
     {
         if (movimentacao.ativa)
         {
-            if (Input.GetKey(KeyCode.A)){
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)){
                 Debug.Log("oi");
                 Sprite.enabled = true;
                 colisaao.enabled = true;
@@ -33,7 +33,7 @@ public class colisaoEsquerda : MonoBehaviour
 
                
             }
-            if (Input.GetKey(KeyCode.D)){
+            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)){
                 Debug.Log("oi");
                 Sprite.enabled = false;
                 colisaao.enabled = false;
