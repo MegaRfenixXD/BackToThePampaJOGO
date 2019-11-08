@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MovimentacaoInimigo : MonoBehaviour
 {
@@ -26,6 +27,8 @@ public class MovimentacaoInimigo : MonoBehaviour
 
     public bool TomouDano;
 
+    private Image GameOver,tela;
+
 
 
 
@@ -34,6 +37,7 @@ public class MovimentacaoInimigo : MonoBehaviour
     {
         fisica = GetComponent<Rigidbody2D>();
         destroiinimigo = GameObject.Find("Gauchito").GetComponent<Movimentacao>();
+
         Time.timeScale = 1;
     }
 
@@ -53,10 +57,18 @@ public class MovimentacaoInimigo : MonoBehaviour
         if (outro.gameObject.tag == "Player")
         {
             Debug.Log("Vidas:" + VidaJogador);
-            TomouDano = true;
-            SoundManager.Playsound("Dano");
+            
             
             VidaJogador--;
+
+            if(VidaJogador < 1)
+            {
+                tela = GameObject.Find("FundoFade").GetComponent<Image>();
+                GameOver =  GameObject.Find("MorteMural").GetComponent<Image>();
+                
+                GameOver.enabled = true;
+                tela.enabled = true;
+            }
 
 
 

@@ -43,6 +43,10 @@ public class TrocarCenas : MonoBehaviour
                 SceneManager.LoadScene("level2");
                 break;
 
+            case "Avançar3":
+                SceneManager.LoadScene("level3");
+                break;
+
         }
     }
 }
