@@ -35,6 +35,10 @@ public class TrocarCenas : MonoBehaviour
                 SceneManager.LoadScene("Telainicio");
                 break;
 
+                case "Escolher":
+                SceneManager.LoadScene("TelaDeSelecao");
+                break;
+
             case "Tela":
                 SceneManager.LoadScene("TelaDeSelecao");
                 break;
