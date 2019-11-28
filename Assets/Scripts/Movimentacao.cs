@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Movimentacao : MonoBehaviour
 {
+
     private float velo = 1f;
     public Animator animator, animator2, explosion, danoAnimator;
 
     public bool ativa;
+
+    public bool morte = false;
 
     public MovimentacaoInimigo DanoInimigo;
 
@@ -209,7 +212,7 @@ public class Movimentacao : MonoBehaviour
 
             if (hit.collider.gameObject.tag == "Morte")
             {
-
+                morte = true;
                 Debug.Log("MORREU");
 
 
