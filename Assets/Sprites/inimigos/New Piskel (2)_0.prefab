@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3194612925481953896}
   - component: {fileID: 975165081605845018}
   - component: {fileID: 1475299884580068815}
+  - component: {fileID: 8807212984826333743}
   m_Layer: 0
   m_Name: New Piskel (2)_0
   m_TagString: Untagged
@@ -151,3 +152,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7611389384cfbf4dbc7f08e42421f45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8807212984826333743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3194612925481953897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af62fa32c0c283a41b96e294b69a345b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  limiteInicio: {fileID: 0}
+  limiteFim: {fileID: 0}
+  velocidadebase: 0
+  velocidade: 0
+  fisica: {fileID: 3194612925481953899}
+  girarinimigo: 0
+  destroiinimigo: {fileID: 0}
+  VidaJogador: 3
+  TomouDano: 0

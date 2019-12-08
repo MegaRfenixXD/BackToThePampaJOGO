@@ -27,6 +27,11 @@ TagManager:
   - Cruzeira1
   - Tatuzito1
   - Tatuzito2
+  - cruzeira2
+  - LimiteDireita2
+  - LimiteEsquerda2
+  - Pregos
+  - Final
   layers:
   - Default
   - TransparentFX
@@ -36,8 +41,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Lobrito
+  - Cruzeira
   - 
   - 
   - 

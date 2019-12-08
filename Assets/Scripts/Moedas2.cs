@@ -20,6 +20,7 @@ public class Moedas2 : MonoBehaviour
 
     public int vari;
 
+    public LevelComplete lc2;
 
 
 
@@ -27,6 +28,9 @@ public class Moedas2 : MonoBehaviour
 
     void Start()
     {
+
+        lc2 = GameObject.Find("pacotinho").GetComponent<LevelComplete>();
+
         Nome = SceneManager.GetActiveScene().name;
 
         moedinhas = GameObject.Find("MoedinhasText").GetComponent<Text>();
@@ -84,59 +88,60 @@ public class Moedas2 : MonoBehaviour
 
 
 
-
-
-
-            if (moedas.contagem == 0)
+            if (lc2.concluido == true)
             {
-                Cena = GameObject.Find("Moedas").GetComponent<SpriteRenderer>().sprite = moedas0;
+
+
+                if (moedas.contagem == 0)
+                {
+                    Cena = GameObject.Find("Moedas").GetComponent<SpriteRenderer>().sprite = moedas0;
+                    PlayerPrefs.SetInt("level2", moedas.contagem);
+
+                }
+
+
+
+            }
+
+            if (moedas.contagem == 1)
+            {
+                Cena = GameObject.Find("Moedas").GetComponent<SpriteRenderer>().sprite = moedas1;
+
+                PlayerPrefs.SetInt("level2", moedas.contagem);
+            }
+
+
+
+            if (moedas.contagem == 2)
+            {
+                Cena = GameObject.Find("Moedas").GetComponent<SpriteRenderer>().sprite = moedas2;
+                PlayerPrefs.SetInt("level2", moedas.contagem);
+
+
+            }
+
+            if (moedas.contagem == 3)
+            {
+                Cena = GameObject.Find("Moedas").GetComponent<SpriteRenderer>().sprite = moedas3;
+
                 PlayerPrefs.SetInt("level2", moedas.contagem);
 
             }
 
 
 
-        }
-
-        if (moedas.contagem == 1)
-        {
-            Cena = GameObject.Find("Moedas").GetComponent<SpriteRenderer>().sprite = moedas1;
-
-            PlayerPrefs.SetInt("level2", moedas.contagem);
-        }
 
 
 
-        if (moedas.contagem == 2)
-        {
-            Cena = GameObject.Find("Moedas").GetComponent<SpriteRenderer>().sprite = moedas2;
-            PlayerPrefs.SetInt("level2", moedas.contagem);
+
+
+
+
+
+
 
 
         }
-
-        if (moedas.contagem == 3)
-        {
-            Cena = GameObject.Find("Moedas").GetComponent<SpriteRenderer>().sprite = moedas3;
-
-            PlayerPrefs.SetInt("level2", moedas.contagem);
-
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
 

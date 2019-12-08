@@ -77,7 +77,7 @@ public class MovimentacaoInimigo : MonoBehaviour
                 Menus2 = GameObject.Find("Menus").GetComponent<Button>();
 
 
-
+                GameObject.Find("Gauchito").GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
                 Destroy(GameObject.Find("Gauchito"));
                 GameOver.enabled = true;
                 tela.enabled = true;
@@ -97,7 +97,7 @@ public class MovimentacaoInimigo : MonoBehaviour
 
 
 
-
+            
         }
         if (outro.gameObject.tag == "LimiteDireita")
         {

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Movimentacao : MonoBehaviour
 {
@@ -35,6 +36,10 @@ public class Movimentacao : MonoBehaviour
 
     public int contagem = 0;
 
+    Renderer rend;
+
+    Color c;
+
 
 
 
@@ -43,7 +48,7 @@ public class Movimentacao : MonoBehaviour
 
 
     public Rigidbody2D velocidade;
-    private RaycastHit2D hit;
+    private RaycastHit2D hit, hit2;
 
 
     void Start()
@@ -107,10 +112,12 @@ public class Movimentacao : MonoBehaviour
         }
     }
 
+
     void destroyy()
     {
-        hit = Physics2D.Linecast(l.position, r.position);
-        Debug.DrawLine(l.position, r.position, Color.red);
+        hit = Physics2D.Linecast(r.position, l.position);
+        hit2 = Physics2D.Linecast(l.position, r.position);
+        Debug.DrawLine(r.position, l.position, Color.red);
 
         if (hit.collider != null)
         {
@@ -141,6 +148,55 @@ public class Movimentacao : MonoBehaviour
 
                 contagem++;
                 Destroy(GameObject.FindGameObjectWithTag("Moedas3"));
+            }
+            if (hit.collider.gameObject.tag == "Cruzeira1")
+            {
+                velocidade.velocity = new Vector2(velocidade.velocity.x, intensidadePulo);
+               
+            }
+            if (hit.collider.gameObject.tag == "Final")
+            {
+                SceneManager.LoadScene("Final"); ;
+
+            }
+
+
+
+            if (hit2.collider != null)
+            {
+                if (hit2.collider.gameObject.tag == "Erva")
+                {
+
+                    ativa = true;
+
+                    Destroy(GameObject.FindGameObjectWithTag("Erva"));
+
+                }
+                if (hit2.collider.gameObject.tag == "Moedas")
+                {
+
+                    contagem++;
+                    Destroy(GameObject.FindGameObjectWithTag("Moedas"));
+                }
+
+                if (hit2.collider.gameObject.tag == "Moedas2")
+                {
+
+                    contagem++;
+                    Destroy(GameObject.FindGameObjectWithTag("Moedas2"));
+                }
+
+                if (hit2.collider.gameObject.tag == "Moedas3")
+                {
+
+                    contagem++;
+                    Destroy(GameObject.FindGameObjectWithTag("Moedas3"));
+                }
+                if (hit2.collider.gameObject.tag == "Cruzeira1")
+                {
+                    velocidade.velocity = new Vector2(velocidade.velocity.x, intensidadePulo);
+                   
+                }
             }
         }
     }
@@ -224,4 +280,7 @@ public class Movimentacao : MonoBehaviour
 
 
     }
+
+   
+    
 }

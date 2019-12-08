@@ -15,15 +15,17 @@ public class LevelComplete : MonoBehaviour
     public Text Congratulacoes, Text1, Text2;
 
 
-    public Image botao1, botao2, botao3;
+    public Image botao1, botao2, botao3,tela;
 
-    public SpriteRenderer Moedas, Mural, Fade;
+    public SpriteRenderer Moedas, Mural, Fade,Moedas2;
 
     public Rigidbody2D hero;
 
     public Movimentacao moedas;
 
    public Button avan, repe, me;
+
+    public bool concluido = false;
    
 
     
@@ -31,7 +33,7 @@ public class LevelComplete : MonoBehaviour
 
     private void Start()
     {
-
+        tela = GameObject.Find("FundoFade").GetComponent<Image>();
         hero = GameObject.Find("Gauchito").GetComponent<Rigidbody2D>();
         botao1 = GameObject.Find("Avancar").GetComponent<Image>();
         botao2 = GameObject.Find("RepetirFase").GetComponent<Image>();
@@ -42,6 +44,7 @@ public class LevelComplete : MonoBehaviour
         me = GameObject.Find("Menu").GetComponent<Button>();
 
         Moedas = GameObject.Find("Moedas").GetComponent<SpriteRenderer>();
+       
         Mural = GameObject.Find("MenuFinal").GetComponent<SpriteRenderer>();
 
         Text1 = GameObject.Find("Desempenho").GetComponent<Text>();
@@ -72,13 +75,14 @@ public class LevelComplete : MonoBehaviour
             {
                 if (hit.collider.gameObject.tag == "NEXT")
                 {
-
+                    concluido = true;
+                    GameObject.Find("Gauchito").GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
                     Congratulacoes.text = "PARABÉNS";
                     Moedas.enabled = true;
                     Mural.enabled = true;
 
-                 
 
+                   
                     botao1.enabled = true;
                     botao2.enabled = true;
                     botao3.enabled = true;

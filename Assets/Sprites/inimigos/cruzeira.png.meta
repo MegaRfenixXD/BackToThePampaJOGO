@@ -4,6 +4,7 @@ TextureImporter:
   fileIDToRecycleName:
     21300000: cruzeira_0
     21300002: cruzeira_1
+    21300004: cruzeira_2
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -89,10 +90,10 @@ TextureImporter:
       name: cruzeira_0
       rect:
         serializedVersion: 2
-        x: 60
-        y: 740
-        width: 440
-        height: 160
+        x: 198
+        y: 1001
+        width: 242
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -100,7 +101,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 760c15a87485e4a43ba8bd65908f5373
+      spriteID: 3be7b7eb01b1aff4483878ef5c3291bb
       vertices: []
       indices: 
       edges: []
@@ -109,10 +110,10 @@ TextureImporter:
       name: cruzeira_1
       rect:
         serializedVersion: 2
-        x: 80
-        y: 100
-        width: 360
-        height: 160
+        x: 924
+        y: 1001
+        width: 198
+        height: 165
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,7 +121,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cfa782694dda48544a33861b75fd31e6
+      spriteID: a649fd6ef10ba054ca3f245cbed634f0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cruzeira_2
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 297
+        width: 220
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 281f6572d134a9046a44c274f1560394
       vertices: []
       indices: 
       edges: []

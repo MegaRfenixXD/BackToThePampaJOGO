@@ -10,6 +10,7 @@ public class Dano : MonoBehaviour
 
 
     public MovimentacaoInimigo vida;
+    public Movimentacao die;
 
 
 
@@ -49,9 +50,18 @@ public class Dano : MonoBehaviour
 
         }
 
+        if (die.morte == true)
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = Vida0;
+        }
+           
+
+        }
+        }
 
 
-    }
 
-}
+    
+
+
 

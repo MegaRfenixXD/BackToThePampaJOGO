@@ -6,11 +6,11 @@ public class GirarSpriteInimigo2 : MonoBehaviour
 { 
 private SpriteRenderer mySpriteRenderer;
 
-public MovimentacaoInimigo inimigomove2;
+public MovimentacaoInimigo2 inimigomove2;
 // Start is called before the first frame update
 void Start()
 {
-    inimigomove2 = GameObject.Find("Tatuzito").GetComponent<MovimentacaoInimigo>();
+    inimigomove2 = GameObject.Find("Tatuzito2").GetComponent<MovimentacaoInimigo2>();
 }
 
 // This function is called just one time by Unity the moment the component loads
