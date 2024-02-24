@@ -8,7 +8,4 @@ Tecnologias:
 Platarforma de desenvolvimento:Unity, Linguagem:C#, Photoshop:sprite.
 
 Documentação:
-https://github.com/MegaRfenixXD/TCCBackToThePampa
-
-Protipo:
-https://www.quant-ux.com/test.html?h=a2aa10aVjEanocpydFLOMSjzGZPiyxqlMywIcRhy8gmlKXedEYxz7OsMiVqy
+https://github.com/RodrigoSampei/TCCBackToThePampa
